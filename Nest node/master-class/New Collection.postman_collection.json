@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "c50bf159-c63f-4026-85c7-e7201d573bc1",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18728922",
+		"_collection_link": "https://lively-crescent-425484.postman.co/workspace/nest-node~c9d2c9b8-841c-4238-8210-c80a17e3d340/collection/18728922-c50bf159-c63f-4026-85c7-e7201d573bc1?action=share&creator=18728922&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"alex madrigar\",\r\n    \"email\": \"dsfsdf@.com\",\r\n    \"password\": \"14324213421\",\r\n    \"birthdate\": \"2000-01-20\",\r\n    \"document\": \"1278361786431\",\r\n    \"acceptedTermsAndConditions\": true,\r\n    \"zipcode\": \"03928220\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAccounts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAccount by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/accounts/97dcd1c4-e919-47e3-a598-71589c110699",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"accounts",
+						"97dcd1c4-e919-47e3-a598-71589c110699"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAccountBy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "meegu",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/accounts/a60eb80e-50b7-4a49-b918-0894c398bf59",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"accounts",
+						"a60eb80e-50b7-4a49-b918-0894c398bf59"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateAccountBy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"alex madrigar\",\r\n    \"email\": \"dsfsdf@.com\",\r\n    \"password\": \"14324213421\",\r\n    \"birthdate\": \"2000-01-20\",\r\n    \"document\": \"1278361786431\",\r\n    \"acceptedTermsAndConditions\": true,\r\n    \"zipcode\": \"03928220\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
